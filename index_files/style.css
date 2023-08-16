@@ -539,8 +539,9 @@ main {
 }
 
 .foreground .text {
+    top: 50%;
     width: 60%;
-    padding-right: 35px;
+    transform: translateY(50%);
     text-align: left;
     color: white
 }
@@ -902,7 +903,7 @@ main {
 }
 
 .section--get-started .columns {
-    max-width: 680px;
+    max-width: 900px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
