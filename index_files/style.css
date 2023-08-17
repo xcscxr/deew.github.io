@@ -315,7 +315,7 @@ p.big {
     margin: 0;
     padding: 0;
     padding-left: 0px;
-    opacity: 0.8
+    color:#d3d5d6;
 }
 
 ul li {
@@ -941,7 +941,9 @@ main {
     -ms-flex-align: start;
     align-items: stretch;
     margin: 0 -10px;
-    padding-top: 60px
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr))
 }
 
 @media (max-width:1168px) {
