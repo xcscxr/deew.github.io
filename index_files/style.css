@@ -453,7 +453,7 @@ main {
     height: 100%;
     z-index: 1;
     overflow: hidden;
-    background-image: url("https://telegra.ph//file/30d8eb163554b2aa7a9c3.png");
+    background-image: url("bg.webp");
     background-position: 50% 100%;
     background-size: cover;
     opacity: 0.5;
