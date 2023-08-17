@@ -513,7 +513,7 @@ main {
     flex-direction: row;
     -webkit-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start;
+    align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -540,8 +540,7 @@ main {
 
 .foreground .text {
     top: 50%;
-    width: 60%;
-    transform: translateY(50%);
+    width: 50%;
     text-align: left;
     color: white
 }
@@ -658,7 +657,6 @@ main {
 
 .foreground .screenshot {
     width: 70%;
-    margin-left: auto
 }
 
 .foreground .screenshot img {
