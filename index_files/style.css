@@ -55,7 +55,8 @@ span.code {
     color: #FFF;
     background: #455261;
     border-radius: 4px;
-    padding: 0 6px;
+    padding: 0 4px;
+    line-height: 20px;
 }
 
 small {
