@@ -301,7 +301,7 @@ p.big {
     }
 }
 
-ul {
+.text>ul {
     margin: 0;
     padding: 0;
     padding-left: 0px;
@@ -335,11 +335,27 @@ ul li:before {
     min-width: 24px;
     background-size: contain;
     display: block;
-    margin-right: 8px
+    margin-right: 8px;
 }
 
 ul li+li {
     margin-top: 10px
+}
+
+ul>ul {
+    margin: 10px 0;
+}
+
+ul>ul li+li {
+    margin-top: 6px;
+}
+
+ul>ul li:before {
+    content: '•';
+    background: none;
+    text-align: center;
+    font-size: 24px;
+    top: 0;
 }
 
 @media (max-width:900px) {

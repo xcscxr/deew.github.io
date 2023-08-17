@@ -70,23 +70,31 @@
             <div class="inner">
                 <div class="img"> <img src="./index_files/deew_dark.png"  style="width: 369px;" alt="deew"></div>
                 <div class="text">
-                    <h2>Main features</h2>
-                    <p class="big">handles Dolby's XML input fuckery in the background, giving you a proper CLI interface</p>
+                    <h2>Description</h2>
+                    <p class="big">Main features:</p>
                     <ul>
-                        <li>converts inputs to RF64 which DEE can use<br>    bit depth, number of channels and other infos are parsed from the source</li>
+                        <li>handles Dolby's XML input fuckery in the background, giving you a proper CLI interface</li>
+                        <li>converts inputs to RF64 which DEE can use bit depth, number of channels and other infos are parsed from the source</li>
+                            <ul>
+                                <li>bit depth, number of channels and other infos are parsed from the source</li>
+                            </ul>
                         <li>an XML file will be generated for each input based on the settings</li>
                         <li>the script utilizes thread pooling for batch encoding (see config)</li>
-                            <ul>
-                                <li>lorem</li>
-                                <li>ipsum</li>
-                            </ul>
                         <li>supports WSL path conversion for the Windows version of DEE (see config)</li>
                         <li>in case of an invalid bitrate it will pick the closest allowed one</li>
                         <li>automatic sample rate conversion using ffmpeg's soxr resampler in case of an unsupported sample rate</li>
+                            <ul>
+                                <li>for DD/DDP/AC4 unsupported rates will be converted to 48 kHz</li>
+                                <li>for TrueHD unsupported rates will be converted to 48 kHz if source sample rate is lower than 72 kHz, otherwise will be converted to 96 kHz</li>
+                            </ul>
                         <li>automatic channel swapping for 7.1 sources (DEE swaps Ls Rs with Lrs Rrs for some reason)</li>
                         <li>automatic dialnorm setting</li>
                         <li>automatically compensates for DEE's 256 sample delay (DD and DDP encoding)</li>
-                        <li>checks if intermediate file is already created so you can encode different formats/bitrates using a single intermediate file</li>
+                        <li>checks if intermediate file is already created so you can encode different formats/bitrates using a single intermediate file, for example:
+                            <br>deew -f dd -b 448 -i input -k
+                            <br>deew -f dd -b 640 -i input -k
+                            <br>deew -f ddp -i input
+                        </li>
                         <li>works even with video inputs (first audio will be selected)</li>
                         <li>fancy terminal output using rich</li>
                         <li>versatile delay option that supports ms, s and also frame@fps formats</li>
